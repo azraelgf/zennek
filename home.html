@@ -5,7 +5,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250904012848">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250904093432">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" data-scroll-show="500" data-scroll="120">
 			<div class="header__container">
 				<a href="/" class="header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
 				<div class="header__menu menu">
@@ -93,7 +93,7 @@
 		<main class="page">
 			<section class="hero">
 				<div class="hero__dec hero__dec-left">
-					<svg width="377" height="796" viewBox="0 0 377 796" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="100%" height="100%" viewBox="0 0 377 796" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g opacity="0.3">
 							<path d="M360.307 796L359.379 796C416.714 561.322 325.661 307.354 99.7968 146.315C-37.5242 48.4062 -202.303 0.800415 -366 0.801208L-366 0C-202.103 -0.000915527 -37.1227 47.663 100.366 145.691C326.451 306.888 417.626 561.083 360.307 796Z" fill="url(#paint0_linear_2135_440)" />
 							<path d="M-366 46.4725C-235.055 57.4072 -102.51 98.7523 16.5695 172.156C262.338 323.653 382.896 569.882 347.883 796L346.965 796C381.984 570.169 261.614 324.184 16.0508 172.813C-102.883 99.4993 -235.244 58.2061 -366 47.2751L-366 46.4725Z" fill="url(#paint1_linear_2135_440)" />
@@ -155,7 +155,7 @@
 					</svg>
 				</div>
 				<div class="hero__dec hero__dec-right">
-					<svg width="950" height="1019" viewBox="0 0 950 1019" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="100%" height="100%" viewBox="0 0 950 1019" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g opacity="0.3">
 							<path d="M21.3661 1019L22.5536 1019C-50.8314 718.577 65.7117 393.459 354.805 187.305C530.569 61.9673 741.476 1.02466 951 1.0257L951 0C741.22 -0.00115967 530.055 61.0158 354.077 186.507C64.6996 392.863 -51.9993 718.271 21.3661 1019Z" fill="url(#paint0_linear_2135_439)" />
 							<path d="M951 59.4919C783.398 73.4899 613.747 126.418 461.332 220.385C146.761 414.325 -7.5459 729.535 37.268 1019L38.4438 1019C-6.37885 729.902 147.688 415.004 461.996 221.227C614.225 127.374 783.64 74.5126 951 60.5193L951 59.4919Z" fill="url(#paint1_linear_2135_439)" />
@@ -216,6 +216,16 @@
 						</defs>
 					</svg>
 				</div>
+				<svg class="hero__dec hero__dec-circle" viewBox="0 0 2246 2246" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<filter id="glow" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+							<feGaussianBlur stdDeviation="200" />
+						</filter>
+					</defs>
+					<g filter="url(#glow)">
+						<circle cx="1123" cy="1123" r="723" fill="#ED5237" fill-opacity="0.42" />
+					</g>
+				</svg>
 				<div class="hero__body swiper">
 					<div class="hero__wrapper swiper-wrapper">
 						<div class="hero__slide slide-hero swiper-slide">
@@ -224,10 +234,10 @@
 							</div>
 							<div class="slide-hero__container">
 								<div class="slide-hero__content">
-									<div class="slide-hero__title wow animate__fadeInDown" data-swiper-parallax-y="100" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="600" data-wow-delay=".3s">
+									<h1 class="slide-hero__title wow animate__fadeInDown" data-swiper-parallax-y="100" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="600" data-wow-delay=".3s">
 										Quality <br>
 										and security
-									</div>
+									</h1>
 									<div class="slide-hero__text wow animate__fadeInDown" data-swiper-parallax-y="50" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="900" data-wow-delay=".4s">
 										Our mission is to provide auto parts that meet the the latest safety, durability and
 										performance.
@@ -364,11 +374,321 @@
 						<div class="swiper-pagination"></div>
 					</div>
 				</div>
-				<button class="hero__scroll" type="button">
+				<button class="hero__scroll" data-goto=".reasons" type="button">
 					<svg>
 						<use xlink:href="img/icons/icons.svg#arrow"></use>
 					</svg>
 				</button>
+			</section>
+			<section class="reasons section">
+				<div class="section__dec section__dec-left">
+					<img src="img/decor/left-dec.svg" alt="Image">
+				</div>
+				<div class="reasons__container">
+					<h2 class="reasons__title title wow animate__fadeInDown">Three reasons to choose ZENNEK</h2>
+					<div class="reasons__swiper swiper">
+						<div class="reasons__items swiper-wrapper">
+							<div class="reasons__slide item-reason swiper-slide wow animate__fadeInRight">
+								<div class="item-reason__top">
+									<div class="item-reason__top-icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#zip"></use>
+										</svg>
+									</div>
+									<div class="item-reason__top-title">
+										Evolving Product Range
+									</div>
+								</div>
+								<div class="item-reason__body">
+									A constantly expanding catalog of products for modern vehicles, including new models.
+								</div>
+							</div>
+							<div class="reasons__slide item-reason swiper-slide wow animate__fadeInRight" data-wow-delay=".1s">
+								<div class="item-reason__top">
+									<div class="item-reason__top-icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#zip"></use>
+										</svg>
+									</div>
+									<div class="item-reason__top-title">
+										High Quality
+									</div>
+								</div>
+								<div class="item-reason__body">
+									Manufacturing meets international standards ISO 9001, ISO 14001, and ISO/IATF 16949, and
+									our parts are supplied to global automotive assembly lines.
+								</div>
+							</div>
+							<div class="reasons__slide item-reason swiper-slide wow animate__fadeInRight" data-wow-delay=".2s">
+								<div class="item-reason__top">
+									<div class="item-reason__top-icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#zip"></use>
+										</svg>
+									</div>
+									<div class="item-reason__top-title">
+										Honest Warranty
+									</div>
+								</div>
+								<div class="item-reason__body">
+									1-year warranty on all parts—we stand by their reliability.
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<section class="note">
+				<div class="note__container">
+					<div class="note__content">
+						<h2 class="note__title title  wow animate__fadeInDown">Please note</h2>
+						<div class="note__text  wow animate__fadeInDown">Our mission is to provide auto parts that meet the
+							the latest safety,
+							durability and performance.
+						</div>
+						<a href="" class="note__btn button button_outline button_arrow  wow animate__fadeInDown">
+							<span>Catalog</span>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#arrow"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="note__swiper swiper">
+						<div class="note__items swiper-wrapper">
+							<div class="note__slide slide-item swiper-slide  wow animate__fadeInRight">
+
+								<a href="" class="slide-item__more">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+									More
+								</a>
+								<div class="slide-item__img">
+									<img src="img/products/01.webp" alt="Image" class="ibg">
+								</div>
+								<div class="slide-item__body">
+									<div class="slide-item__title">Brake rotors</div>
+									<div class="slide-item__count">120 products in the category</div>
+									<div class="slide-item__text">Our mission is to provide auto parts that meet the the
+										latest safety, durability and performance.
+									</div>
+								</div>
+							</div>
+							<div class="note__slide slide-item swiper-slide  wow animate__fadeInRight" data-wow-delay=".1s">
+
+								<a href="" class="slide-item__more">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+									More
+								</a>
+								<div class="slide-item__img">
+									<img src="img/products/02.webp" alt="Image" class="ibg">
+								</div>
+								<div class="slide-item__body">
+									<div class="slide-item__title">Brake drums</div>
+									<div class="slide-item__count">120 products in the category</div>
+									<div class="slide-item__text">Our mission is to provide auto parts that meet the the
+										latest safety, durability and performance.
+									</div>
+								</div>
+							</div>
+							<div class="note__slide slide-item swiper-slide  wow animate__fadeInRight" data-wow-delay=".2s">
+
+								<a href="" class="slide-item__more">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+									More
+								</a>
+								<div class="slide-item__img">
+									<img src="img/products/03.webp" alt="Image" class="ibg">
+								</div>
+								<div class="slide-item__body">
+									<div class="slide-item__title">Control Arms</div>
+									<div class="slide-item__count">120 products in the category</div>
+									<div class="slide-item__text">Our mission is to provide auto parts that meet the the
+										latest safety, durability and performance.
+									</div>
+								</div>
+							</div>
+							<div class="note__slide slide-item swiper-slide  wow animate__fadeInRight" data-wow-delay=".3s">
+
+								<a href="" class="slide-item__more">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+									More
+								</a>
+								<div class="slide-item__img">
+									<img src="img/products/04.webp" alt="Image" class="ibg">
+								</div>
+								<div class="slide-item__body">
+									<div class="slide-item__title">ABS sensors</div>
+									<div class="slide-item__count">120 products in the category</div>
+									<div class="slide-item__text">Our mission is to provide auto parts that meet the the
+										latest safety, durability and performance.
+									</div>
+								</div>
+							</div>
+							<div class="note__slide slide-item swiper-slide">
+								<a href="" class="slide-item__more">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+									More
+								</a>
+								<div class="slide-item__img">
+									<img src="img/products/05.webp" alt="Image" class="ibg">
+								</div>
+								<div class="slide-item__body">
+									<div class="slide-item__title">ABS sensors</div>
+									<div class="slide-item__count">120 products in the category</div>
+									<div class="slide-item__text">Our mission is to provide auto parts that meet the the
+										latest safety, durability and performance.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="note__more">
+						<a href="" class="note__more-btn button button_outline button_arrow">
+							<span>Catalog</span>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#arrow"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="about">
+				<div class="about__container">
+					<h2 class="about__title title wow animate__fadeInDown">
+						zennek.parts - <small>is a dynamic brand in the automotive-industrial sector</small>
+					</h2>
+					<div class="about__items">
+						<div class="item-about item-about_video wow animate__fadeInDown">
+							<div class="item-about__video">
+								<div class="item-about__img">
+									<img src="img/main/about/video-img.webp" alt="Image" class="ibg">
+								</div>
+							</div>
+							<div class="item-about__body">
+								<button class="item-about__play" type="button" data-popup="#video-popup" data-popup-youtube="RDBX6FTYLoQ">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#play"></use>
+									</svg>
+								</button>
+								<div class="item-about__text">Brand ZENNEK — is about quality, safety and commitment to our
+									customers.
+								</div>
+							</div>
+						</div>
+						<div class="item-about item-about_page wow animate__fadeInDown">
+							<div class="item-about__img">
+								<img src="img/main/about/block-img.webp" alt="Image" class="ibg">
+							</div>
+							<div class="item-about__body">
+								<div class="item-about__title">Customer-oriented approach</div>
+								<div class="item-about__text">
+									We care about everyone: customers, auto mechanics, and drivers. Our goal is not just to
+									sell, but to establish long-term partnerships and support your success.
+								</div>
+							</div>
+							<a href="" class="item-about__btn button button_outline button_dark button_arrow">
+								<span>About us</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="item-about item-about_white item-about_link wow animate__fadeInDown">
+							<div class="item-about__icon">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#guarant"></use>
+								</svg>
+							</div>
+							<div class="item-about__body">
+								<div class="item-about__title"><a href="">Guaranteed quality</a></div>
+								<div class="item-about__body-block">
+									<div class="item-about__text">
+										The parts are laboratory tested and are produced only in certified factories that
+										are
+										suppliers to car manufacturers.
+									</div>
+									<div class="item-about__plus">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="item-about item-about_accent item-about_link wow animate__fadeInDown">
+							<div class="item-about__icon">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#price"></use>
+								</svg>
+							</div>
+							<div class="item-about__body">
+								<div class="item-about__title"><a href="">Excellent price</a></div>
+								<div class="item-about__body-block">
+									<div class="item-about__text">
+										ZENNEK parts are not inferior to the original ones, but they are more affordable.
+									</div>
+									<div class="item-about__plus">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="feedback">
+				<div class="feedback__container">
+					<div class="feedback__inner wow animate__fadeIn">
+						<div class="feedback__info">
+							<h2 class="feedback__title title wow animate__fadeInDown"><small>We will help you solve
+									all the issues</small></h2>
+							<div class="feedback__text wow animate__fadeInDown">If you have any questions, please leave a request and we will call
+								you
+								back
+							</div>
+						</div>
+						<div class="feedback__form form wow animate__fadeInDown">
+							<form action="#">
+								<div class="form__inner">
+									<div class="form__row">
+										<input class="input" autocomplete="off" type="text" name="form[]" placeholder="Name">
+									</div>
+									<div class="form__row">
+										<div class="form__column">
+											<input class="input" autocomplete="off" type="text" name="form[]" placeholder="Phone">
+										</div>
+										<div class="form__column">
+											<input class="input" autocomplete="off" type="text" name="form[]" placeholder="E-mail">
+										</div>
+
+									</div>
+									<div class="form__row">
+										<button class="form__button button" type="submit">to send</button>
+									</div>
+									<div class="form__row">
+										<div class="form__text">By clicking the button, I agree to the <a href="">processing
+												of my
+												personal data</a> and <a href="">the terms of use</a>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		<footer class="footer">
@@ -572,8 +892,22 @@
 			</div>
 		</footer>
 
+		<div id="video-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.73333 1.48883L21.5469 21.0288" stroke="#000" stroke-linecap="square" />
+							<path d="M21.2667 1.48883L1.45309 21.0288" stroke="#000" stroke-linecap="square" />
+						</svg>
+					</button>
+					<div class="video-popup" data-popup-youtube-place></div>
+				</div>
+			</div>
+		</div>
+
 	</div>
-	<script src="js/app.min.js?_v=20250904012848"></script>
+	<script src="js/app.min.js?_v=20250904093432"></script>
 </body>
 
 </html>
