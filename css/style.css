@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap);
+/*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
 @font-face {
   font-family: Nagel;
   font-display: swap;
@@ -1736,7 +1737,8 @@ body::after {
   opacity: 0
 }
 .swiper.mobile__swiper,
-.swiper.reasons__swiper {
+.swiper.reasons__swiper,
+.swiper.tablet__swiper {
   visibility: visible;
   opacity: 1
 }
