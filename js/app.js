@@ -4820,6 +4820,30 @@
                     clickable: true
                 }
             }, someFunc);
+            if (document.querySelector(".tablet__swiper")) resizableSwiper("(max-width: 991.98px)", ".tablet__swiper", {
+                modules: [ Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 800,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                }
+            }, someFunc);
+            if (document.querySelector(".mobile__swiper")) resizableSwiper("(max-width: 479.98px)", ".mobile__swiper", {
+                modules: [ Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 800,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                }
+            }, someFunc);
             if (document.querySelector(".hero__body")) {
                 const ROOT = document.querySelector(".hero__body");
                 const DELAY = 8e3;
@@ -4895,6 +4919,41 @@
                     });
                 }
             }
+            if (document.querySelector(".note__swiper")) new Swiper(".note_big-info .note__swiper", {
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 800,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.1,
+                        autoHeight: true
+                    },
+                    375: {
+                        slidesPerView: 1.2
+                    },
+                    480: {
+                        slidesPerView: 1.4
+                    },
+                    556: {
+                        slidesPerView: 2
+                    },
+                    800: {
+                        slidesPerView: 3
+                    },
+                    992: {
+                        slidesPerView: 1.6
+                    },
+                    1200: {
+                        slidesPerView: 1.7
+                    },
+                    1490: {
+                        slidesPerView: 2
+                    }
+                },
+                on: {}
+            });
         }
         window.addEventListener("load", initSliders);
         let addWindowScrollEvent = false;
