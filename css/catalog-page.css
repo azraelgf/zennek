@@ -16,6 +16,11 @@
 .catalog-page__search-text span {
     color: var(--accent)
 }
+.catalog-page__table {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch
+}
 .catalog-page .product-item.product-item_category {
     min-height: 30.625rem
 }
