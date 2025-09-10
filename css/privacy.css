@@ -1,0 +1,41 @@
+.privacy {
+    position: relative;
+    z-index: 2
+}
+.privacy ol {
+    padding-left: 1.25rem
+}
+.privacy ol li::marker {
+    font-weight: 800
+}
+.privacy ul li+li {
+    margin-top: .25rem
+}
+.privacy strong {
+    font-weight: 800;
+    display: block
+}
+@media (min-width:98.75em) {
+    .privacy ol li+li {
+        margin-top: 1.5625rem
+    }
+    ul~p:not(:last-child) {
+        margin-top: 1.5625rem
+    }
+}
+@media (max-width:20em) {
+    .privacy ol li+li {
+        margin-top: 1.125rem
+    }
+    ul~p:not(:last-child) {
+        margin-top: 1.125rem
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .privacy ol li+li {
+        margin-top: clamp(1.125rem ,1.0138888889rem + .5555555556vw ,1.5625rem)
+    }
+    ul~p:not(:last-child) {
+        margin-top: clamp(1.125rem ,1.0138888889rem + .5555555556vw ,1.5625rem)
+    }
+}

@@ -1,0 +1,86 @@
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: .625rem;
+    margin-top: 1.25rem
+}
+.swiper-pagination-bullet {
+    width: .3125rem;
+    height: .3125rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    transition: background-color .3s ease-in-out
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--accent)
+}
+.hero__body .swiper-pagination-bullet {
+    border-radius: 0;
+    height: .125rem;
+    width: 8.125rem;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative
+}
+.hero__body .swiper-pagination-bullet .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--accent);
+    -webkit-transform-origin: left center;
+    transform-origin: left center
+}
+.hero__body .swiper-pagination-bullet-active .progress {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-animation: bullet-fill var(--bullet-progress,8000ms) linear forwards;
+    animation: bullet-fill var(--bullet-progress,8000ms) linear forwards
+}
+.hero__body .swiper-pagination {
+    justify-content: flex-start;
+    gap: 0;
+    pointer-events: none;
+    margin-top: -6.625rem;
+    padding-bottom: 6.625rem
+}
+@media (min-width:74.99875em) {
+    .main-thumbs-swiper .swiper-pagination {
+        display: none
+    }
+}
+@media (min-width:98.75em) {
+    .hero__body .swiper-pagination-bullet {
+        width: 8.125rem
+    }
+}
+@media (max-width:20em) {
+    .hero__body .swiper-pagination-bullet {
+        width: 4.25rem
+    }
+}
+@media (max-width:74.99875em) {
+    .main-thumbs-swiper .swiper-pagination-bullet {
+        background-color: var(--gray)
+    }
+    .main-thumbs-swiper .swiper-pagination-bullet-active {
+        background-color: var(--accent)
+    }
+    .hero__body .swiper-pagination {
+        margin-top: -9.125rem;
+        padding-bottom: 9.125rem
+    }
+}
+@media (max-width:47.99875em) {
+    .hero__body .swiper-pagination {
+        justify-content: center;
+        margin-top: -3.125rem;
+        padding-bottom: 3.125rem
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .hero__body .swiper-pagination-bullet {
+        width: clamp(4.25rem ,3.2658730159rem + 4.9206349206vw ,8.125rem)
+    }
+}

@@ -1,0 +1,37 @@
+.text-block__title {
+    margin-bottom: 2.75rem
+}
+.text-block__info {
+    display: flex
+}
+.text-block__info-item {
+    flex: 1 1 50%
+}
+@media (min-width:98.75em) {
+    .text-block__info {
+        gap: 1.5625rem
+    }
+}
+@media (max-width:20em) {
+    .text-block__info {
+        gap: 1.125rem
+    }
+}
+@media (max-width:61.99875em) {
+    .text-block__title {
+        margin-bottom: 2.25rem
+    }
+}
+@media (max-width:47.99875em) {
+    .text-block__info {
+        flex-wrap: wrap
+    }
+    .text-block__info-item {
+        flex: 1 1 100%
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .text-block__info {
+        gap: clamp(1.125rem ,1.0138888889rem + .5555555556vw ,1.5625rem)
+    }
+}

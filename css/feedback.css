@@ -1,0 +1,132 @@
+.feedback .form__inner {
+    display: grid;
+    gap: 1.5625rem
+}
+.form__row {
+    display: flex;
+    gap: 1.25rem
+}
+.form__column {
+    flex: 1 1 auto
+}
+.form__button {
+    min-width: 11.5rem
+}
+.form__text {
+    color: var(--secondary);
+    line-height: 1.3
+}
+.form__text a {
+    text-decoration: underline
+}
+.feedback {
+    position: relative;
+    z-index: 2;
+    color: var(--black)
+}
+.feedback__inner {
+    padding: 5.375rem 7.5rem;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    display: flex;
+    gap: 1.625rem;
+    justify-content: space-between
+}
+.feedback__info {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 26.875rem
+}
+.feedback__contacts {
+    margin-top: auto
+}
+.feedback__title {
+    margin-bottom: 2.5rem
+}
+.feedback__text {
+    line-height: 1.3
+}
+.feedback__text:not(:last-child) {
+    margin-bottom: 1.5625rem
+}
+.feedback__form {
+    flex: 0 0 50%
+}
+.feedback .form__button {
+    color: var(--primary)
+}
+@media (min-width:98.75em) {
+    .form__text {
+        font-size: .875rem
+    }
+    .feedback__text {
+        font-size: 1.125rem
+    }
+}
+@media (max-width:20em) {
+    .form__text {
+        font-size: .75rem
+    }
+    .feedback__text {
+        font-size: .875rem
+    }
+}
+@media (max-width:98.75em) {
+    .feedback__inner {
+        padding: 3.75rem 5rem
+    }
+}
+@media (max-width:74.99875em) {
+    .feedback__inner {
+        padding: 2.5rem 3.75rem
+    }
+    .feedback__info {
+        flex: 0 0 40%
+    }
+    .feedback__title {
+        margin-bottom: 1.875rem
+    }
+}
+@media (max-width:61.99875em) {
+    .feedback__inner {
+        padding: 2.25rem 1.875rem
+    }
+}
+@media (max-width:47.99875em) {
+    .feedback .form__inner {
+        gap: .625rem
+    }
+    .form__row {
+        flex-direction: column;
+        gap: .625rem
+    }
+    .form__button {
+        min-width: 100%
+    }
+    .feedback__inner {
+        padding: 2.25rem 1.25rem;
+        flex-wrap: wrap
+    }
+    .feedback__info {
+        flex: 1 1 100%
+    }
+    .feedback__title {
+        margin-bottom: 1.25rem
+    }
+    .feedback__form {
+        flex: 1 1 100%
+    }
+}
+@media (max-width:29.99875em) {
+    .feedback__title {
+        margin-bottom: .75rem
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .form__text {
+        font-size: clamp(.75rem ,.7182539683rem + .1587301587vw ,.875rem)
+    }
+    .feedback__text {
+        font-size: clamp(.875rem ,.8115079365rem + .3174603175vw ,1.125rem)
+    }
+}

@@ -1,0 +1,62 @@
+.pagging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem
+}
+.pagging__arrow-prev {
+    rotate: 90deg
+}
+.pagging__arrow-next {
+    rotate: -90deg
+}
+.pagging__arrow svg {
+    width: .5rem;
+    height: .75rem
+}
+.pagging__list {
+    display: flex;
+    gap: .5rem
+}
+.pagging__item {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: background-color .3s ease-in-out
+}
+.pagging__item._active {
+    background-color: var(--accent)
+}
+@media (min-width:98.75em) {
+    .pagging {
+        margin-top: 3.75rem
+    }
+    .pagging__item {
+        font-size: .875rem
+    }
+}
+@media (max-width:20em) {
+    .pagging {
+        margin-top: 2.25rem
+    }
+    .pagging__item {
+        font-size: .75rem
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .pagging {
+        margin-top: clamp(2.25rem ,1.869047619rem + 1.9047619048vw ,3.75rem)
+    }
+    .pagging__item {
+        font-size: clamp(.75rem ,.7182539683rem + .1587301587vw ,.875rem)
+    }
+}
+@media (any-hover:hover) {
+    .pagging__item:hover {
+        background-color: var(--accent)
+    }
+}

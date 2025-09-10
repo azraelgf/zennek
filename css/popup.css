@@ -1,0 +1,129 @@
+body::after {
+    content: "";
+    background-color: rgba(0,0,0,.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .8s ease 0s;
+    pointer-events: none;
+    z-index: 149
+}
+@supports (backdrop-filter:blur(8px)) {
+    body::after {
+        background-color: rgba(0,0,0,.6);
+        backdrop-filter: blur(8px)
+    }
+}
+.popup-show body::after {
+    opacity: 1
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 30px 10px;
+    transition: visibility .8s ease 0s;
+    visibility: hidden;
+    pointer-events: none
+}
+.popup_show {
+    z-index: 150;
+    visibility: visible;
+    overflow: auto;
+    pointer-events: auto
+}
+.popup_show .popup__content {
+    visibility: visible;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+.popup__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    flex: 1 1 auto;
+    width: 100%;
+    justify-content: center
+}
+.popup__content {
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: -webkit-transform .3s ease 0s;
+    transition: transform .3s ease 0s;
+    transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px
+}
+.popup_video .popup__content {
+    max-width: 98.75em;
+    padding: 0;
+    background-color: rgba(0,0,0,0)
+}
+.lock .popup__content {
+    visibility: visible
+}
+.popup__close {
+    position: absolute;
+    width: 3.75rem;
+    height: 3.75rem;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 2
+}
+.video-popup iframe {
+    border-radius: 1.25rem;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9
+}
+.popup__title {
+    text-align: center
+}
+.popup-search__inner {
+    display: flex;
+    background-color: var(--primary);
+    border-radius: 6.25rem
+}
+.popup-search__input {
+    flex: 1 1 auto
+}
+.popup-search__btn {
+    margin-right: -.0625rem
+}
+@media (min-width:98.75em) {
+    .popup__title {
+        margin-bottom: 2.25rem
+    }
+}
+@media (max-width:20em) {
+    .popup__title {
+        margin-bottom: .9375rem
+    }
+}
+@media (max-width:47.99875em) {
+    .popup__content {
+        padding: 2.5rem 1.25rem
+    }
+    .popup_video .popup__content {
+        padding: 0
+    }
+    .popup__close {
+        width: 1.875rem;
+        height: 1.875rem;
+        top: .625rem;
+        right: .625rem
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .popup__title {
+        margin-bottom: clamp(.9375rem ,.6041666667rem + 1.6666666667vw ,2.25rem)
+    }
+}

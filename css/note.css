@@ -1,0 +1,128 @@
+.note {
+    z-index: 2
+}
+.note__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .08;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: -webkit-transform 8s ease;
+    transition: transform 8s ease;
+    transition: transform 8s ease,-webkit-transform 8s ease
+}
+.note__img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 7.5rem;
+    bottom: -.0625rem;
+    left: 0;
+    background: linear-gradient(180deg,rgba(6,8,8,0) 0,#060808 100%)
+}
+.note__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 3.75rem
+}
+.note__content {
+    flex: 0 0 26.875rem;
+    display: grid;
+    gap: 2.25rem;
+    align-content: start;
+    justify-items: start;
+    position: relative;
+    z-index: 2
+}
+.note__swiper {
+    min-width: 1px;
+    min-height: 1px;
+    flex: 1 1 auto
+}
+.note__swiper.swiper {
+    overflow: visible
+}
+.note__text {
+    line-height: 1.4
+}
+.note__btns {
+    display: flex;
+    gap: 1.25rem;
+    width: 100%
+}
+@media (min-width:47.99875em) {
+    .note__more {
+        display: none
+    }
+}
+@media (min-width:61.99875em) {
+    .note_big-info .note__content {
+        flex: 0 0 49%
+    }
+    .note__swiper {
+        clip-path: inset(0 -50vw 0 0)
+    }
+}
+@media (min-width:98.75em) {
+    .note__text {
+        font-size: 1.25rem
+    }
+    .note__text p+p {
+        margin-top: 1.25rem
+    }
+}
+@media (max-width:20em) {
+    .note__text {
+        font-size: .875rem
+    }
+    .note__text p+p {
+        margin-top: .75rem
+    }
+}
+@media (max-width:74.99875em) {
+    .note__container {
+        gap: 3.125rem
+    }
+}
+@media (max-width:61.99875em) {
+    .note__container {
+        flex-wrap: wrap;
+        gap: 2.25rem
+    }
+    .note__content {
+        flex: 1 1 100%
+    }
+    .note__btns {
+        flex-wrap: wrap
+    }
+}
+@media (max-width:47.99875em) {
+    .note__btn {
+        display: none
+    }
+    .note__btns .note__btn {
+        display: inline-flex
+    }
+    .note__btns .note__btn {
+        min-width: 100%;
+        flex: 1 1 50%
+    }
+    .note__more {
+        flex: 1 1 auto
+    }
+    .note__btns {
+        gap: .625rem
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .note__text {
+        font-size: clamp(.875rem ,.7797619048rem + .4761904762vw ,1.25rem)
+    }
+    .note__text p+p {
+        margin-top: clamp(.75rem ,.623015873rem + .6349206349vw ,1.25rem)
+    }
+}

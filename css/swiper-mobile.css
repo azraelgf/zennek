@@ -1,0 +1,22 @@
+.swiper.swiper_mobile .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.25rem
+}
+@media (max-width:74.99875em) {
+    .swiper.swiper_mobile .swiper-wrapper {
+        grid-template-columns: repeat(3,1fr)
+    }
+}
+@media (max-width:47.99875em) {
+    .swiper.swiper_mobile .swiper-wrapper {
+        grid-template-columns: repeat(2,1fr);
+        gap: .625rem
+    }
+}
+@media (max-width:29.99875em) {
+    .swiper.swiper_mobile .swiper-wrapper {
+        display: flex;
+        gap: 0
+    }
+}
