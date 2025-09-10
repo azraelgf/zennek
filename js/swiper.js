@@ -4056,7 +4056,7 @@
                 clickable: true
             }
         }, someFunc);
-        if (document.querySelector(".tablet__swiper")) resizableSwiper("(max-width: 991.98px)", ".tablet__swiper", {
+        if (document.querySelector(".swiper_tablet")) resizableSwiper("(max-width: 991.98px)", ".swiper_tablet", {
             modules: [ Pagination ],
             observer: true,
             observeParents: true,
