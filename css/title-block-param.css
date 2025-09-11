@@ -1,0 +1,43 @@
+.title-block-param {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .625rem
+}
+.title-block-param__back {
+    display: inline-flex;
+    align-items: center;
+    gap: .625rem;
+    font-weight: 600;
+    transition: color .3s ease-in-out
+}
+.title-block-param__back svg {
+    width: 1.125rem;
+    height: 1.125rem
+}
+@media (min-width:98.75em) {
+    .title-block-param__back {
+        font-size: 1rem
+    }
+}
+@media (max-width:20em) {
+    .title-block-param__back {
+        font-size: .875rem
+    }
+}
+@media (max-width:47.99875em) {
+    .title-block-param__back {
+        display: none
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .title-block-param__back {
+        font-size: clamp(.875rem ,.8432539683rem + .1587301587vw ,1rem)
+    }
+}
+@media (any-hover:hover) {
+    .title-block-param__back:hover {
+        color: var(--accent)
+    }
+}

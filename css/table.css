@@ -74,9 +74,25 @@
 .parameters-nav__table .table td {
     padding-bottom: .625rem
 }
-.parameters-detail__table .table td u,
-.parameters-nav__table .table td u {
-    color: #06f
+.parameters-detail__table .table td a,
+.parameters-nav__table .table td a {
+    text-decoration: underline;
+    color: #06f;
+    transition: color .3s ease-in-out
+}
+.parameters-detail__table .table td a.table__btn,
+.parameters-nav__table .table td a.table__btn {
+    color: var(--black);
+    text-decoration: none;
+    min-width: 6.5625rem;
+    min-height: 1.875rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem .625rem;
+    border-radius: 6.25rem;
+    background-color: var(--bg-light);
+    transition: background-color .3s ease-in-out,color .3s ease-in-out
 }
 .parameters-detail__table .table tr:last-child td,
 .parameters-nav__table .table tr:last-child td {
@@ -153,5 +169,16 @@
     .parameters-detail__table .table th,
     .parameters-nav__table .table th {
         font-size: clamp(.875rem ,.8432539683rem + .1587301587vw ,1rem)
+    }
+}
+@media (any-hover:hover) {
+    .parameters-detail__table .table td a:hover,
+    .parameters-nav__table .table td a:hover {
+        color: var(--accent)
+    }
+    .parameters-detail__table .table td a.table__btn:hover,
+    .parameters-nav__table .table td a.table__btn:hover {
+        background-color: var(--black);
+        color: var(--primary)
     }
 }

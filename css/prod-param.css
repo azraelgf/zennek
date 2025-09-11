@@ -126,23 +126,7 @@
     transition: background-color .3s ease-in-out,color .3s ease-in-out
 }
 .parameters-detail__title-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .625rem;
     margin-bottom: 1.25rem
-}
-.parameters-detail__back {
-    display: inline-flex;
-    align-items: center;
-    gap: .625rem;
-    font-weight: 600;
-    transition: color .3s ease-in-out
-}
-.parameters-detail__back svg {
-    width: 1.125rem;
-    height: 1.125rem
 }
 .parameters-detail__inner {
     display: flex;
@@ -170,9 +154,6 @@
     .btn-info {
         font-size: .875rem
     }
-    .parameters-detail__back {
-        font-size: 1rem
-    }
     .parameters-detail__img-caption {
         font-size: 1rem
     }
@@ -193,9 +174,6 @@
     }
     .btn-info {
         font-size: .75rem
-    }
-    .parameters-detail__back {
-        font-size: .875rem
     }
     .parameters-detail__img-caption {
         font-size: .75rem
@@ -241,11 +219,9 @@
         -webkit-overflow-scrolling: touch;
         touch-action: pan-x
     }
-    .parameters-detail__back {
-        display: none
-    }
     .parameters-detail__inner {
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        gap: 1.875rem
     }
     .parameters-detail__table {
         flex: 1 1 100%;
@@ -283,9 +259,6 @@
     .btn-info {
         font-size: clamp(.75rem ,.7182539683rem + .1587301587vw ,.875rem)
     }
-    .parameters-detail__back {
-        font-size: clamp(.875rem ,.8432539683rem + .1587301587vw ,1rem)
-    }
     .parameters-detail__img-caption {
         font-size: clamp(.75rem ,.6865079365rem + .3174603175vw ,1rem)
     }
@@ -302,8 +275,5 @@
     .btn-info:hover {
         background-color: #262626;
         color: var(--primary)
-    }
-    .parameters-detail__back:hover {
-        color: var(--accent)
     }
 }

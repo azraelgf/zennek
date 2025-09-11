@@ -5,6 +5,10 @@
 .spollers__item {
     line-height: 1.2
 }
+.spollers_param .spollers__item:first-child .spollers__title {
+    padding-top: .625rem;
+    border-top: 1px solid #eee
+}
 .spollers__title {
     width: 100%;
     cursor: default;
@@ -20,6 +24,9 @@
     padding-bottom: .625rem;
     border-bottom: 1px solid #eee;
     transition: color .3s ease-in-out
+}
+.spollers_param .spollers__title {
+    text-transform: initial
 }
 .parameters-nav__spollers .spollers__title {
     text-transform: initial
