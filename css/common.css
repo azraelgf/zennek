@@ -3,8 +3,8 @@
 @font-face {
     font-family: Nagel;
     font-display: swap;
-    src: url(../fonts/Nagel-Bold.woff2) format("woff2");
-    font-weight: 700;
+    src: url(../fonts/Nagel-Regular.woff2) format("woff2");
+    font-weight: 400;
     font-style: normal
 }
 
@@ -13,6 +13,14 @@
     font-display: swap;
     src: url(../fonts/Nagel-Medium.woff2) format("woff2");
     font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Nagel;
+    font-display: swap;
+    src: url(../fonts/Nagel-Bold.woff2) format("woff2");
+    font-weight: 700;
     font-style: normal
 }
 
@@ -193,6 +201,7 @@ h6 {
     gap: .875rem;
     font-weight: 600;
     font-size: 1rem;
+    color: var(--primary);
     background-color: var(--accent);
     min-height: 3.75rem;
     border-radius: 6.25rem;
@@ -284,6 +293,11 @@ h6 {
 
 .button_gray {
     background-color: #262626
+}
+
+.button_light {
+    background-color: var(--bg-light);
+    color: var(--black)
 }
 
 .button_icon svg {
@@ -399,6 +413,10 @@ textarea.input {
     height: 1rem
 }
 
+.search.parameters-product__search {
+    border: 1px solid #434343
+}
+
 .title {
     font-weight: 500;
     font-family: var(--title-font), sans-serif;
@@ -450,11 +468,6 @@ textarea.input {
 .section {
     position: relative;
     padding-bottom: 6.5625rem
-}
-
-.section__container {
-    position: relative;
-    z-index: 2;
 }
 
 .section.section_top {
@@ -587,6 +600,18 @@ textarea.input {
 
     .section__title:not(:last-child) {
         margin-bottom: 3.75rem
+    }
+}
+
+@media (min-width: 75em) {
+    .parameters-product__actions .button {
+        font-size: 1rem
+    }
+}
+
+@media (max-width: 48em) {
+    .parameters-product__actions .button {
+        font-size: .875rem
     }
 }
 
@@ -754,6 +779,12 @@ textarea.input {
     }
 }
 
+@media (min-width: 48em)and (max-width: 75em) {
+    .parameters-product__actions .button {
+        font-size: clamp(.875rem, .6527777778rem + .462962963vw, 1rem)
+    }
+}
+
 @media (min-width: 20em)and (max-width: 98.75em) {
     .title {
         font-size: clamp(1.5rem, 1.119047619rem + 1.9047619048vw, 3rem)
@@ -833,6 +864,11 @@ textarea.input {
     }
 
     .button_gray:hover {
+        background-color: #151515
+    }
+
+    .button_light:hover {
+        color: var(--primary);
         background-color: #151515
     }
 }

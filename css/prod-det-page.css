@@ -95,6 +95,13 @@
 .info-detail__wrapper+.info-detail__wrapper {
     margin-top: 2.5rem
 }
+.info-detail__art {
+    color: var(--primary);
+    justify-self: start;
+    padding: .4375rem 1.25rem;
+    border-radius: 6.25rem;
+    background-color: var(--accent)
+}
 .info-detail__title {
     margin-bottom: .3125rem
 }
@@ -193,6 +200,9 @@
     .info-detail__wrapper {
         font-size: 1rem
     }
+    .info-detail__art {
+        font-size: .875rem
+    }
     .info-detail__serial-num {
         font-size: .875rem
     }
@@ -225,6 +235,9 @@
     }
     .info-detail__wrapper {
         font-size: .875rem
+    }
+    .info-detail__art {
+        font-size: .625rem
     }
     .info-detail__serial-num {
         font-size: .75rem
@@ -293,6 +306,9 @@
     .info-detail__wrapper+.info-detail__wrapper {
         margin-top: .9375rem
     }
+    .info-detail__art {
+        padding: .1875rem .75rem
+    }
 }
 @media (min-width:20em)and (max-width:98.75em) {
     .product-detail__title {
@@ -300,6 +316,9 @@
     }
     .info-detail__wrapper {
         font-size: clamp(.875rem ,.8432539683rem + .1587301587vw ,1rem)
+    }
+    .info-detail__art {
+        font-size: clamp(.625rem ,.5615079365rem + .3174603175vw ,.875rem)
     }
     .info-detail__serial-num {
         font-size: clamp(.75rem ,.7182539683rem + .1587301587vw ,.875rem)

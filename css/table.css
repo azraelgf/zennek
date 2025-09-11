@@ -5,6 +5,12 @@
     table-layout: auto;
     line-height: 1.4
 }
+.table__count {
+    display: flex;
+    gap: .875rem;
+    align-items: center;
+    justify-content: flex-end
+}
 .table tr+tr {
     border-top: 1px solid #eee
 }
@@ -22,9 +28,11 @@
     font-weight: 800
 }
 .table th {
+    font-weight: 500;
     text-align: left;
     padding-bottom: .625rem;
-    border-bottom: 1px solid #262626
+    border-bottom: 1px solid #262626;
+    font-family: var(--title-font),sans-serif
 }
 .table.table_param {
     width: 100%;
@@ -36,12 +44,68 @@
 .table.table_param td {
     padding: .1875rem .625rem .1875rem 0
 }
+.table td:last-child,
+.table th:last-child {
+    width: 35%
+}
 .table td:nth-child(3),
 .table th:nth-child(3) {
     width: 15%
 }
 .table.table_param tr+tr {
     border-top: 0
+}
+.table.table_param td:first-child {
+    width: 10%
+}
+.parameters-detail__table .table,
+.parameters-nav__table .table {
+    min-width: initial
+}
+.parameters-detail__table .table th,
+.parameters-nav__table .table th {
+    border-top: 1px solid #262626
+}
+.parameters-detail__table .table th:last-child,
+.parameters-nav__table .table th:last-child {
+    text-align: right
+}
+.parameters-detail__table .table td,
+.parameters-nav__table .table td {
+    padding-bottom: .625rem
+}
+.parameters-detail__table .table td u,
+.parameters-nav__table .table td u {
+    color: #06f
+}
+.parameters-detail__table .table tr:last-child td,
+.parameters-nav__table .table tr:last-child td {
+    border-bottom: 1px solid #eee
+}
+.parameters-detail__table .table td:first-child,
+.parameters-detail__table .table th:first-child {
+    width: 3%
+}
+.parameters-detail__table .table td:nth-child(2),
+.parameters-detail__table .table th:nth-child(2) {
+    width: 16%
+}
+.parameters-detail__table .table td:nth-child(3),
+.parameters-detail__table .table th:nth-child(3) {
+    width: auto
+}
+.parameters-detail__table .table td:last-child,
+.parameters-detail__table .table th:last-child {
+    width: 6%
+}
+@media (min-width:98.75em) {
+    .table th {
+        font-size: 1.125rem
+    }
+    .parameters-detail__table .table th,
+    .parameters-nav__table .table th {
+        font-size: 1rem
+    }
 }
 @media (min-width:120em) {
     .table {
@@ -53,13 +117,41 @@
         font-size: .75rem
     }
 }
+@media (max-width:20em) {
+    .table th {
+        font-size: 1rem
+    }
+    .parameters-detail__table .table th,
+    .parameters-nav__table .table th {
+        font-size: .875rem
+    }
+}
+@media (max-width:61.99875em) {
+    .table td:last-child,
+    .table th:last-child {
+        width: auto
+    }
+}
 @media (max-width:47.99875em) {
     .table td {
         padding-bottom: 1.25rem
+    }
+    .parameters-detail__table .table,
+    .parameters-nav__table .table {
+        min-width: 28.75rem
     }
 }
 @media (min-width:48em)and (max-width:120em) {
     .table {
         font-size: clamp(.75rem ,.6666666667rem + .1736111111vw ,.875rem)
+    }
+}
+@media (min-width:20em)and (max-width:98.75em) {
+    .table th {
+        font-size: clamp(1rem ,.9682539683rem + .1587301587vw ,1.125rem)
+    }
+    .parameters-detail__table .table th,
+    .parameters-nav__table .table th {
+        font-size: clamp(.875rem ,.8432539683rem + .1587301587vw ,1rem)
     }
 }

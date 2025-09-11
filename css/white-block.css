@@ -11,3 +11,8 @@
         padding: 1.25rem
     }
 }
+@media (max-width:29.99875em) {
+    .white-block {
+        padding: 1.25rem 1rem
+    }
+}
