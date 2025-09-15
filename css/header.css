@@ -26,7 +26,6 @@
     color: var(--accent)
 }
 .menu__contacts-link {
-    text-transform: uppercase;
     font-weight: 500;
     font-size: 1.25rem;
     display: block;
