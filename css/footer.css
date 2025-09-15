@@ -94,7 +94,8 @@
     font-weight: 600;
     font-size: 1.375rem;
     padding: 1.3125rem 0;
-    margin-bottom: 2.5rem
+    margin-bottom: 2.5rem;
+    transition: all .3s ease-in-out
 }
 .footer-menu-catalog__list {
     display: grid;
