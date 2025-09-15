@@ -228,9 +228,8 @@
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-x
+        /*overflow-y: hidden;*/
+        /*touch-action: pan-x*/
     }
 }
 @media (max-width:29.99875em) {
