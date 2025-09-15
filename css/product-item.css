@@ -241,7 +241,9 @@
 }
 @media (max-width:29.99875em) {
     .product-item {
-        padding-top: .625rem
+        padding-top: .625rem;
+        clip-path: inset(0 round 1rem);
+        border-radius: 1rem;
     }
     .product-item {
         background-image: none
