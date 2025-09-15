@@ -1,3 +1,7 @@
+.swiper_mobile,.swiper_other{
+    position: relative;
+    z-index: 2;
+}
 .swiper.swiper_mobile .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(4,1fr);
