@@ -2145,6 +2145,20 @@
         interactive: true,
         hideOnClick: true
     });
+    (function setupTooltipHideOnScroll() {
+        const container = document.querySelector(".parameters-detail__table");
+        if (!container) return;
+        const tooltipButtons = container.querySelectorAll(".btn-info");
+        const instances = Array.from(tooltipButtons).map(btn => btn._tippy).filter(Boolean);
+        let scrollTimeout;
+        container.addEventListener("scroll", () => {
+            instances.forEach(inst => inst.hide());
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {}, 100);
+        }, {
+            passive: true
+        });
+    })();
     let addWindowScrollEvent = false;
     setTimeout(() => {
         if (addWindowScrollEvent) {
