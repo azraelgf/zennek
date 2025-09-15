@@ -146,6 +146,10 @@
         padding-bottom: .125rem;
         border-bottom: 1px solid transparent
     }
+    .footer-menu-catalog__title {
+        padding-bottom: .125rem;
+        border-bottom: 1px solid transparent
+    }
 }
 @media (max-width:74.99875em) {
     .footer::before {
@@ -197,7 +201,7 @@
         margin-bottom: .625rem
     }
     .footer-menu-catalog__list li a {
-        font-size: 1rem;
+        font-size: .875rem;
         padding: .375rem 0
     }
     .contacts-footer {
@@ -209,7 +213,7 @@
         margin-right: .9375rem
     }
     .contacts-footer__col:nth-child(3) .contacts-footer__text {
-        font-size: .875rem
+        font-size: .75rem
     }
     .contacts-footer__link {
         font-size: 1.125rem
@@ -299,6 +303,10 @@
 }
 @media (any-hover:hover) {
     .menu-footer__link:hover {
+        color: var(--accent);
+        border-color: var(--accent)
+    }
+    .footer-menu-catalog__title:hover {
         color: var(--accent);
         border-color: var(--accent)
     }

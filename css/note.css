@@ -47,7 +47,8 @@
     overflow: visible
 }
 .note__text {
-    line-height: 1.4
+    line-height: 1.4;
+    font-size: 1.25rem
 }
 .note__btns {
     display: flex;
@@ -68,17 +69,11 @@
     }
 }
 @media (min-width:98.75em) {
-    .note__text {
-        font-size: 1.25rem
-    }
     .note__text p+p {
         margin-top: 1.25rem
     }
 }
 @media (max-width:20em) {
-    .note__text {
-        font-size: .875rem
-    }
     .note__text p+p {
         margin-top: .75rem
     }
@@ -86,6 +81,9 @@
 @media (max-width:74.99875em) {
     .note__container {
         gap: 3.125rem
+    }
+    .note__text {
+        font-size: 1rem
     }
 }
 @media (max-width:61.99875em) {
@@ -101,6 +99,9 @@
     }
 }
 @media (max-width:47.99875em) {
+    .note__text {
+        font-size: .875rem
+    }
     .note__btn {
         display: none
     }
@@ -119,9 +120,6 @@
     }
 }
 @media (min-width:20em)and (max-width:98.75em) {
-    .note__text {
-        font-size: clamp(.875rem ,.7797619048rem + .4761904762vw ,1.25rem)
-    }
     .note__text p+p {
         margin-top: clamp(.75rem ,.623015873rem + .6349206349vw ,1.25rem)
     }

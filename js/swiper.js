@@ -4030,45 +4030,56 @@
                     slidesPerView: 2
                 },
                 800: {
+                    slidesPerView: 2.9
+                },
+                992: {
+                    slidesPerView: 1.6
+                },
+                1200: {
+                    slidesPerView: 2.24
+                },
+                1490: {
+                    slidesPerView: 2.67
+                }
+            },
+            on: {}
+        });
+        if (document.querySelector(".note__swiper")) new Swiper(".note_big-info .note__swiper", {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 800,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.1,
+                    autoHeight: true
+                },
+                375: {
+                    slidesPerView: 1.2
+                },
+                480: {
+                    slidesPerView: 1.4
+                },
+                556: {
+                    slidesPerView: 2
+                },
+                800: {
                     slidesPerView: 3
                 },
                 992: {
                     slidesPerView: 1.6
                 },
                 1200: {
-                    slidesPerView: 2.2
+                    slidesPerView: 1.7
                 },
                 1490: {
-                    slidesPerView: 3
+                    slidesPerView: 2
                 }
             },
             on: {}
         });
-        if (document.querySelector(".reasons__swiper")) resizableSwiper("(max-width: 479.98px)", ".reasons__swiper", {
-            modules: [ Pagination ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            speed: 800,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            }
-        }, someFunc);
-        if (document.querySelector(".swiper_tablet")) resizableSwiper("(max-width: 991.98px)", ".swiper_tablet", {
-            modules: [ Pagination ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            speed: 800,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            }
-        }, someFunc);
-        if (document.querySelector(".swiper_mobile")) resizableSwiper("(max-width: 479.98px)", ".swiper_mobile", {
+        if (document.querySelector(".reasons__swiper")) resizableSwiper("(max-width: 991.98px)", ".reasons__swiper", {
             modules: [ Pagination ],
             observer: true,
             observeParents: true,
@@ -4155,41 +4166,6 @@
                 });
             }
         }
-        if (document.querySelector(".note__swiper")) new Swiper(".note_big-info .note__swiper", {
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            speed: 800,
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.1,
-                    autoHeight: true
-                },
-                375: {
-                    slidesPerView: 1.2
-                },
-                480: {
-                    slidesPerView: 1.4
-                },
-                556: {
-                    slidesPerView: 2
-                },
-                800: {
-                    slidesPerView: 3
-                },
-                992: {
-                    slidesPerView: 1.6
-                },
-                1200: {
-                    slidesPerView: 1.7
-                },
-                1490: {
-                    slidesPerView: 2
-                }
-            },
-            on: {}
-        });
         if (document.querySelector(".product-detail__images")) {
             const thumbsSwiper = new Swiper(".thumbs-swiper", {
                 modules: [ Navigation, Thumb ],
@@ -4223,6 +4199,58 @@
                 }
             });
         }
+        if (document.querySelector(".swiper_tablet")) resizableSwiper("(max-width: 991.98px)", ".swiper_tablet", {
+            modules: [ Pagination ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 800,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        }, someFunc);
+        if (document.querySelector(".swiper_mobile")) resizableSwiper("(max-width: 479.98px)", ".swiper_mobile", {
+            modules: [ Pagination ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 800,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        }, someFunc);
+        if (document.querySelector(".swiper_other")) resizableSwiper("(max-width: 1199.98px)", ".swiper_other", {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 800,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.1,
+                    autoHeight: true
+                },
+                375: {
+                    slidesPerView: 1.2
+                },
+                480: {
+                    slidesPerView: 1.4
+                },
+                556: {
+                    slidesPerView: 2
+                },
+                800: {
+                    slidesPerView: 3
+                },
+                992: {
+                    slidesPerView: 3
+                }
+            }
+        }, someFunc);
     }
     window.addEventListener("load", initSliders);
     let addWindowScrollEvent = false;

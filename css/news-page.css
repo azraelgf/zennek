@@ -13,17 +13,18 @@
     gap: 1.25rem
 }
 .news-item {
-    background-color: var(--primary);
     border-radius: 1.25rem;
     overflow: hidden;
     color: var(--black)
 }
 .news-item__img {
-    border-radius: 0 0 1.25rem 1.25rem;
+    border-radius: 1.25rem;
     overflow: hidden
 }
 .news-item__body {
-    padding: 1.25rem 1.25rem 1.5rem
+    margin-top: -1.25rem;
+    background-color: var(--primary);
+    padding: 2.5rem 1.25rem 1.5rem
 }
 .news-item__title {
     font-weight: 500

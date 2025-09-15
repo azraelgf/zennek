@@ -35,15 +35,13 @@
 .item-reason__body {
     line-height: 1.4
 }
-@media (min-width:29.99875em) {
-    .reasons__items.swiper-wrapper {
-        display: grid;
-        gap: 1.25rem
-    }
-}
 @media (min-width:61.99875em) {
     .reasons__items {
         grid-template-columns: repeat(3,1fr)
+    }
+    .reasons__items.swiper-wrapper {
+        display: grid;
+        gap: 1.25rem
     }
     .item-reason {
         min-height: 13.125rem

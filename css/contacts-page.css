@@ -22,6 +22,9 @@
 .contacts__item+.contacts__item {
     margin-top: 1.25rem
 }
+.contacts__item-text {
+    line-height: 1.5
+}
 @media (min-width:98.75em) {
     .contacts__item {
         font-size: 1.125rem
