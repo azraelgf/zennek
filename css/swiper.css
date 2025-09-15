@@ -5,6 +5,7 @@
 }
 .swiper.reasons__swiper,
 .swiper.swiper_mobile,
+.swiper.swiper_other,
 .swiper.swiper_tablet {
     visibility: visible;
     opacity: 1
