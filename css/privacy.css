@@ -15,27 +15,36 @@
     font-weight: 800;
     display: block
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
     .privacy ol li+li {
-        margin-top: 1.5625rem
+        margin-top: 2.5rem
+    }
+    .privacy ul {
+        margin-bottom: 2.25rem
     }
     ul~p:not(:last-child) {
-        margin-top: 1.5625rem
+        margin-top: 2.25rem
     }
 }
 @media (max-width:20em) {
     .privacy ol li+li {
         margin-top: 1.125rem
     }
+    .privacy ul {
+        margin-bottom: 1.125rem
+    }
     ul~p:not(:last-child) {
         margin-top: 1.125rem
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .privacy ol li+li {
-        margin-top: clamp(1.125rem ,1.0138888889rem + .5555555556vw ,1.5625rem)
+        margin-top: clamp(1.125rem ,.773rem + 1.76vw ,2.5rem)
+    }
+    .privacy ul {
+        margin-bottom: clamp(1.125rem ,.837rem + 1.44vw ,2.25rem)
     }
     ul~p:not(:last-child) {
-        margin-top: clamp(1.125rem ,1.0138888889rem + .5555555556vw ,1.5625rem)
+        margin-top: clamp(1.125rem ,.837rem + 1.44vw ,2.25rem)
     }
 }

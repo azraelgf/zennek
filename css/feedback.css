@@ -17,6 +17,7 @@
     line-height: 1.3
 }
 .form__text a {
+    transition: opacity .3s ease-in-out;
     text-decoration: underline
 }
 .feedback {
@@ -32,10 +33,13 @@
     gap: 1.625rem;
     justify-content: space-between
 }
+.feedback_page .feedback__inner {
+    padding: 3.125rem 7.5rem
+}
 .feedback__info {
     display: flex;
     flex-direction: column;
-    flex: 0 0 26.875rem
+    flex: 0 0 28.75rem
 }
 .feedback__contacts {
     margin-top: auto
@@ -55,7 +59,7 @@
 .feedback .form__button {
     color: var(--primary)
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
     .form__text {
         font-size: .875rem
     }
@@ -71,13 +75,19 @@
         font-size: .875rem
     }
 }
-@media (max-width:98.75em) {
+@media (max-width:98.125em) {
     .feedback__inner {
+        padding: 3.75rem 5rem
+    }
+    .feedback_page .feedback__inner {
         padding: 3.75rem 5rem
     }
 }
 @media (max-width:74.99875em) {
     .feedback__inner {
+        padding: 2.5rem 3.75rem
+    }
+    .feedback_page .feedback__inner {
         padding: 2.5rem 3.75rem
     }
     .feedback__info {
@@ -89,6 +99,9 @@
 }
 @media (max-width:61.99875em) {
     .feedback__inner {
+        padding: 2.25rem 1.875rem
+    }
+    .feedback_page .feedback__inner {
         padding: 2.25rem 1.875rem
     }
 }
@@ -107,6 +120,9 @@
         padding: 2.25rem 1.25rem;
         flex-wrap: wrap
     }
+    .feedback_page .feedback__inner {
+        padding: 2.25rem 1.25rem
+    }
     .feedback__info {
         flex: 1 1 100%
     }
@@ -122,11 +138,16 @@
         margin-bottom: .75rem
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .form__text {
-        font-size: clamp(.75rem ,.7182539683rem + .1587301587vw ,.875rem)
+        font-size: clamp(.75rem ,.718rem + .16vw ,.875rem)
     }
     .feedback__text {
-        font-size: clamp(.875rem ,.8115079365rem + .3174603175vw ,1.125rem)
+        font-size: clamp(.875rem ,.811rem + .32vw ,1.125rem)
+    }
+}
+@media (any-hover:hover) {
+    .form__text a:hover {
+        opacity: .6
     }
 }

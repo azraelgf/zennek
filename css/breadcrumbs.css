@@ -17,7 +17,8 @@
 }
 .breadcrumbs__link {
     display: flex;
-    align-items: center
+    align-items: center;
+    transition: color .3s ease-in-out
 }
 .breadcrumbs__link::after {
     color: #535353;
@@ -28,7 +29,7 @@
     padding-top: 0;
     padding-bottom: 0
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
     .breadcrumbs {
         font-size: 1rem
     }
@@ -48,8 +49,13 @@
         padding-bottom: 0
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .breadcrumbs {
-        font-size: clamp(.875rem ,.8432539683rem + .1587301587vw ,1rem)
+        font-size: clamp(.875rem ,.843rem + .16vw ,1rem)
+    }
+}
+@media (any-hover:hover) {
+    .breadcrumbs__link:hover {
+        color: var(--accent)
     }
 }

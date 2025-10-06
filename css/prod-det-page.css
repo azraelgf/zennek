@@ -28,7 +28,7 @@
     flex: 0 0 10rem
 }
 .product-detail__info {
-    flex: 1 1 33%
+    flex: 1 1 30%
 }
 .thumbs-swiper {
     position: relative;
@@ -89,11 +89,11 @@
 }
 .info-detail__wrapper {
     display: grid;
-    gap: .625rem;
+    gap: 1.125rem;
     line-height: 1.2
 }
 .info-detail__wrapper+.info-detail__wrapper {
-    margin-top: 2.5rem
+    margin-top: 2.8125rem
 }
 .info-detail__art {
     color: var(--primary);
@@ -108,7 +108,7 @@
 .info-detail__item {
     display: flex;
     justify-content: space-between;
-    padding-bottom: .625rem;
+    padding-bottom: .75rem;
     border-bottom: 1px solid #eee
 }
 .info-detail__serial {
@@ -193,7 +193,7 @@
         opacity: 1
     }
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
     .product-detail__title {
         margin-bottom: 2.5rem
     }
@@ -243,7 +243,7 @@
         font-size: .75rem
     }
 }
-@media (max-width:98.75em) {
+@media (max-width:98.125em) {
     .product-detail__slider {
         gap: 1.25rem
     }
@@ -310,18 +310,18 @@
         padding: .1875rem .75rem
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .product-detail__title {
-        margin-bottom: clamp(1.25rem ,.9325396825rem + 1.5873015873vw ,2.5rem)
+        margin-bottom: clamp(1.25rem ,.93rem + 1.6vw ,2.5rem)
     }
     .info-detail__wrapper {
-        font-size: clamp(.875rem ,.8432539683rem + .1587301587vw ,1rem)
+        font-size: clamp(.875rem ,.843rem + .16vw ,1rem)
     }
     .info-detail__art {
-        font-size: clamp(.625rem ,.5615079365rem + .3174603175vw ,.875rem)
+        font-size: clamp(.625rem ,.561rem + .32vw ,.875rem)
     }
     .info-detail__serial-num {
-        font-size: clamp(.75rem ,.7182539683rem + .1587301587vw ,.875rem)
+        font-size: clamp(.75rem ,.718rem + .16vw ,.875rem)
     }
 }
 @media (min-width:75em)and (max-width:120em) {
@@ -339,5 +339,9 @@
     .swiper-button:hover {
         color: var(--black);
         border-color: var(--black)
+    }
+    .info-detail__serial-btn:hover {
+        background-color: var(--accent);
+        color: #fff
     }
 }

@@ -71,11 +71,11 @@
     background: url(../img/icons/minus.svg) no-repeat center/contain
 }
 .spollers__body {
-    padding: 0 1.25rem .625rem;
+    padding: .625rem 1.25rem 1.25rem;
     border-bottom: 1px solid #eee
 }
 .spollers__body li+li {
-    margin-top: .3125rem
+    margin-top: .9375rem
 }
 .spollers__body-list {
     padding-left: .75rem
@@ -87,7 +87,7 @@
 .spollers__body_in .spollers__body {
     border-bottom: 0
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
     .spollers__item {
         font-size: .875rem
     }
@@ -111,15 +111,18 @@
     .parameters-nav__spollers .spollers__item {
         font-size: .875rem
     }
+    .spollers__body li+li {
+        margin-top: .625rem
+    }
 }
 @media (max-width:29.99875em) {
     .spollers__body {
         padding: 0 .625rem .625rem
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .spollers__item {
-        font-size: clamp(.75rem ,.7182539683rem + .1587301587vw ,.875rem)
+        font-size: clamp(.75rem ,.718rem + .16vw ,.875rem)
     }
 }
 @media (min-width:48em)and (max-width:75em) {

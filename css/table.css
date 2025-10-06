@@ -34,6 +34,15 @@
     border-bottom: 1px solid #262626;
     font-family: var(--title-font),sans-serif
 }
+.table.table_main td:first-child {
+    width: 15%
+}
+.table.table_main td:nth-child(2) {
+    width: 27%
+}
+.table.table_main td:nth-child(3) {
+    width: 27%
+}
 .table.table_param {
     width: 100%;
     min-width: 100%
@@ -47,10 +56,6 @@
 .table td:last-child,
 .table th:last-child {
     width: 35%
-}
-.table td:nth-child(3),
-.table th:nth-child(3) {
-    width: 15%
 }
 .table.table_param tr+tr {
     border-top: 0
@@ -114,7 +119,11 @@
 .parameters-detail__table .table th:last-child {
     width: 6%
 }
-@media (min-width:98.75em) {
+.tr-hover {
+    cursor: pointer;
+    transition: background-color .2s ease
+}
+@media (min-width:98.125em) {
     .table th {
         font-size: 1.125rem
     }
@@ -152,6 +161,12 @@
     .table td {
         padding-bottom: 1.25rem
     }
+    .table.table_main td:first-child {
+        width: 17%
+    }
+    .table.table_main td:nth-child(3) {
+        width: 20%
+    }
     .parameters-detail__table .table,
     .parameters-nav__table .table {
         min-width: 28.75rem
@@ -162,13 +177,13 @@
         font-size: clamp(.75rem ,.6666666667rem + .1736111111vw ,.875rem)
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .table th {
-        font-size: clamp(1rem ,.9682539683rem + .1587301587vw ,1.125rem)
+        font-size: clamp(1rem ,.968rem + .16vw ,1.125rem)
     }
     .parameters-detail__table .table th,
     .parameters-nav__table .table th {
-        font-size: clamp(.875rem ,.8432539683rem + .1587301587vw ,1rem)
+        font-size: clamp(.875rem ,.843rem + .16vw ,1rem)
     }
 }
 @media (any-hover:hover) {
@@ -180,5 +195,8 @@
     .parameters-nav__table .table td a.table__btn:hover {
         background-color: var(--black);
         color: var(--primary)
+    }
+    .tr-hover:hover {
+        background-color: #f5f5f5
     }
 }

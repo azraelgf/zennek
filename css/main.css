@@ -28,8 +28,8 @@
     transition: all .3s ease-in-out;
     position: absolute;
     left: 50%;
-    bottom: 10%;
-    translate: -50% 0;
+    bottom: 9%;
+    translate: -53% 0;
     z-index: 2
 }
 .hero__scroll svg {
@@ -75,18 +75,20 @@
     position: relative;
     z-index: 3
 }
+.slide-hero__content {
+    flex: 1 1 auto
+}
 .slide-hero__title {
     font-family: var(--title-font),sans-serif;
-    font-size: 6rem;
     font-weight: 500;
-    line-height: 1.1875;
+    line-height: 1.3;
     margin-bottom: 1.5rem
 }
 .slide-hero__text {
     line-height: 1.3
 }
 .slide-hero__img {
-    flex: 0 0 42%;
+    flex: 0 0 40%;
     position: relative;
     margin-right: 5rem
 }
@@ -99,8 +101,8 @@
     width: 20.6875rem;
     height: 33.8125rem;
     top: 50%;
-    translate: 0 -50%;
-    right: 0
+    translate: 0 -47%;
+    right: 6%
 }
 @-webkit-keyframes bullet-fill {
     from {
@@ -182,12 +184,12 @@
 }
 @media (min-width:61.99875em) {
     .slide-hero__text {
-        max-width: 39.375rem
+        max-width: 37.5rem
     }
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
     .slide-hero__title {
-        font-size: 5.375rem
+        font-size: 6rem
     }
     .slide-hero__text {
         font-size: 1.25rem
@@ -235,7 +237,7 @@
         margin-bottom: 2.125rem
     }
 }
-@media (max-width:98.75em) {
+@media (max-width:98.125em) {
     .slide-hero__img {
         margin-right: 2.5rem
     }
@@ -291,15 +293,15 @@
         height: clamp(24.875rem ,14.6607142857rem + 15.9598214286vw ,33.8125rem)
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .slide-hero__title {
-        font-size: clamp(2.5rem ,1.7698412698rem + 3.6507936508vw ,5.375rem)
+        font-size: clamp(2.5rem ,1.604rem + 4.48vw ,6rem)
     }
     .slide-hero__text {
-        font-size: clamp(.875rem ,.7797619048rem + .4761904762vw ,1.25rem)
+        font-size: clamp(.875rem ,.779rem + .48vw ,1.25rem)
     }
     .slide-hero__text {
-        margin-bottom: clamp(2.125rem ,1.4900793651rem + 3.1746031746vw ,4.625rem)
+        margin-bottom: clamp(2.125rem ,1.485rem + 3.2vw ,4.625rem)
     }
 }
 @media (any-hover:hover) {

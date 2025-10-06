@@ -1,7 +1,6 @@
 .not-found {
     position: relative;
     z-index: 2;
-    padding-top: 9.1875rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +22,10 @@
     display: flex;
     gap: 1.25rem
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
+    .not-found {
+        margin-top: 11.25rem
+    }
     .not-found__title {
         font-size: 20.5rem
     }
@@ -32,6 +34,9 @@
     }
 }
 @media (max-width:20em) {
+    .not-found {
+        margin-top: 5.625rem
+    }
     .not-found__title {
         font-size: 8rem
     }
@@ -50,11 +55,14 @@
         gap: .625rem
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
+    .not-found {
+        margin-top: clamp(5.625rem ,4.185rem + 7.2vw ,11.25rem)
+    }
     .not-found__title {
-        font-size: clamp(8rem ,4.8253968254rem + 15.873015873vw ,20.5rem)
+        font-size: clamp(8rem ,4.8rem + 16vw ,20.5rem)
     }
     .not-found__accent-text {
-        font-size: clamp(1.5rem ,1.373015873rem + .6349206349vw ,2rem)
+        font-size: clamp(1.5rem ,1.372rem + .64vw ,2rem)
     }
 }

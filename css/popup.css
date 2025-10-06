@@ -63,9 +63,15 @@ body::after {
     border-radius: 20px
 }
 .popup_video .popup__content {
-    max-width: 98.75em;
+    max-width: 98.125em;
     padding: 0;
     background-color: rgba(0,0,0,0)
+}
+.popup_sm .popup__content {
+    padding: 1.875rem;
+    max-width: 35rem;
+    background-color: #fff;
+    color: var(--black)
 }
 .lock .popup__content {
     visibility: visible
@@ -76,7 +82,11 @@ body::after {
     height: 3.75rem;
     top: 1.25rem;
     right: 1.25rem;
-    z-index: 2
+    z-index: 3
+}
+.popup_sm .popup__close {
+    width: 1.875rem;
+    height: 1.875rem
 }
 .video-popup iframe {
     border-radius: 1.25rem;
@@ -98,7 +108,7 @@ body::after {
 .popup-search__btn {
     margin-right: -.0625rem
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
     .popup__title {
         margin-bottom: 2.25rem
     }
@@ -122,8 +132,8 @@ body::after {
         right: .625rem
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .popup__title {
-        margin-bottom: clamp(.9375rem ,.6041666667rem + 1.6666666667vw ,2.25rem)
+        margin-bottom: clamp(.9375rem ,.6015rem + 1.68vw ,2.25rem)
     }
 }

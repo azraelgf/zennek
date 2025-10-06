@@ -23,7 +23,8 @@
     position: relative;
     list-style: none;
     font-family: var(--title-font),sans-serif;
-    font-weight: 500
+    font-weight: 500;
+    transition: background-color .3s ease-in-out,color .3s ease-in-out
 }
 .top-product-parameters__title::-webkit-details-marker,
 .top-product-parameters__title::marker {
@@ -147,7 +148,15 @@
 .parameters-detail__table {
     flex: 1 1 50%
 }
-@media (min-width:98.75em) {
+@media (min-width:74.99875em) {
+    .parameters-product__btn:first-child {
+        min-width: 13.4375rem
+    }
+    .parameters-product__btn:nth-child(2) {
+        min-width: 22.3125rem
+    }
+}
+@media (min-width:98.125em) {
     .top-product-parameters__title {
         font-size: 1.125rem
     }
@@ -191,6 +200,9 @@
     }
 }
 @media (max-width:61.99875em) {
+    .parameters-product__actions {
+        flex-wrap: wrap
+    }
     .parameters-nav__spollers {
         flex: 0 0 28%
     }
@@ -200,7 +212,6 @@
 }
 @media (max-width:47.99875em) {
     .parameters-product__actions {
-        flex-wrap: wrap;
         gap: .625rem;
         margin-bottom: .9375rem
     }
@@ -227,9 +238,7 @@
         flex: 1 1 100%;
         width: 100%;
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        /*overflow-y: hidden;*/
-        /*touch-action: pan-x*/
+        -webkit-overflow-scrolling: touch
     }
 }
 @media (max-width:29.99875em) {
@@ -251,15 +260,15 @@
         order: -1
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .top-product-parameters__title {
-        font-size: clamp(.875rem ,.8115079365rem + .3174603175vw ,1.125rem)
+        font-size: clamp(.875rem ,.811rem + .32vw ,1.125rem)
     }
     .btn-info {
-        font-size: clamp(.75rem ,.7182539683rem + .1587301587vw ,.875rem)
+        font-size: clamp(.75rem ,.718rem + .16vw ,.875rem)
     }
     .parameters-detail__img-caption {
-        font-size: clamp(.75rem ,.6865079365rem + .3174603175vw ,1rem)
+        font-size: clamp(.75rem ,.686rem + .32vw ,1rem)
     }
 }
 @media (min-width:48em)and (max-width:120em) {
@@ -268,6 +277,14 @@
     }
 }
 @media (any-hover:hover) {
+    .top-product-parameters__title:hover {
+        background-color: var(--accent);
+        color: #fff
+    }
+    .top-product-parameters__title:hover:after,
+    .top-product-parameters__title:hover:before {
+        background-color: #fff
+    }
     .parameters-nav__img-link:hover {
         background-color: var(--inverse)
     }

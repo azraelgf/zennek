@@ -47,7 +47,7 @@
         min-height: 13.125rem
     }
 }
-@media (min-width:98.75em) {
+@media (min-width:98.125em) {
     .reasons__title {
         margin-bottom: 6.5625rem
     }
@@ -94,18 +94,18 @@
         height: 2.125rem
     }
 }
-@media (min-width:20em)and (max-width:98.75em) {
+@media (min-width:20em)and (max-width:98.125em) {
     .reasons__title {
-        margin-bottom: clamp(2.1875rem ,1.0763888889rem + 5.5555555556vw ,6.5625rem)
+        margin-bottom: clamp(2.1875rem ,1.0675rem + 5.6vw ,6.5625rem)
     }
     .item-reason__top-title {
-        font-size: clamp(1rem ,.873015873rem + .6349206349vw ,1.5rem)
+        font-size: clamp(1rem ,.872rem + .64vw ,1.5rem)
     }
     .reasons_small-title .item-reason__top-title {
-        font-size: clamp(1rem ,.9365079365rem + .3174603175vw ,1.25rem)
+        font-size: clamp(1rem ,.936rem + .32vw ,1.25rem)
     }
     .item-reason__body {
-        font-size: clamp(.75rem ,.6865079365rem + .3174603175vw ,1rem)
+        font-size: clamp(.75rem ,.686rem + .32vw ,1rem)
     }
 }
 @media (any-hover:hover) {
